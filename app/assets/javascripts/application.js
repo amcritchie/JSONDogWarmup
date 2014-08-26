@@ -28,7 +28,7 @@ $(document).ready(function () {
       },
       {
         "owner": "Bobby",
-        "name": "I don't know",
+        "name": "Maddagins",
         "preferences": [
           {"favoriteFood": "children"},
           {"favoriteToy": "children"}
@@ -44,6 +44,18 @@ $(document).ready(function () {
       }
     ]
   };
+
+
+    jQuery.each(gschoolDogs["dogs"], function(index,value){
+
+        var html = '<tr>';
+        html += '<th>' + value["owner"] + '</th>';
+        html += '<th>' + value["name"] + '</th>';
+        html += '<th>' + value["preferences"][0]["favoriteFood"] + '</th>';
+        html += '<th>' + value["preferences"][1]["favoriteToy"] + '</th>';
+        $('table').append(html);
+        });
+
   // Write come code to add the dogs to the table !!!!
 });
 
